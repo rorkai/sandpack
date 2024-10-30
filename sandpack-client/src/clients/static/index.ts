@@ -139,6 +139,10 @@ export class SandpackStatic extends SandpackClient {
           return `<link rel="stylesheet" href="${resource}">`;
         }
 
+        if (fileType === "tailwindcss") {
+          return `<link rel="stylesheet" type="text/tailwindcss" href="${resource}">`;
+        }
+
         if (fileType === "js") {
           return `<script src="${resource}"></script>`;
         }
